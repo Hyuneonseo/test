@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<script src="paper.js"></script>
+	<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Heebo|Hind+Madurai|Hind+Siliguri|Nunito+Sans|Yantramanav" rel="stylesheet">
+	<title>땋은머리.인터러뱅</title>
+	<style>
+		a:link, a:active, a:visited{text-decoration: none; }
+        a:link, a:active, a:visited{color: black;}
+
+        body {
+		   transform: scale(0.8);
+		   transform-origin: 0 1;
+		   // add prefixed versions too. 
+
+		}
+
+        .test {background-color: yellow;}
+        #changepage{position: fixed; top: 735px; left: -135px; width: 300px; height: 20px; background: #f3ff00; font-weight: 900; text-align: left; font-size: 1.2em; transform: rotate(-90deg);}
+		a #changepage:hover{background: black; color: #f3ff00;}
+		.tophead{margin: auto; width: 1500px; height: 130px; border: 1px solid black; font-family: 'Noto Sans KR', sans-serif;}
+		#tphd1{background: #f3ff00; float: right; width: 450px; height: 20px; font-weight: 900; text-align: right; font-size: 1.1em;}
+		#tphd2{position: relative; top: 29px; border: 1px solid black; width: 500px; height: 100px; font-weight: 700; font-size: 4em; }
+		#tphd3{position: relative; top: -73px; left: 1000px; border: 1px solid black; width: 500px; height: 100px; font-weight: 900; font-size: 4.6em; text-align: right; font-family: 'Yantramanav', sans-serif;}
+
+
+
+		.midcon{margin: auto; width: 1500px; height: 750px; border: 1px solid black; font-family: 'Noto Sans KR', sans-serif;}
+		#midcon1{margin: auto; width: 1500px; height: 10px; background: black;}
+		#midcon2{margin: auto; width: 1500px; height: 10px; background: black; top: 730px; position: relative;}
+		#midcon3{margin: auto; width: 10px; height: 750px; background: black; top: -20px; position: relative;}
+		#midcon4{position: relative; border: 1px solid red; width: 585px; height: 570px; top: -760px; left: 0px; text-align: left; font-size: 3em; font-weight: 700; line-height: 1.5em; overflow: auto; padding: 80px; }
+		#midcon4:hover{color: white;}
+		#midcon5{position: relative; width: 745px; height: 732px; top: -1492px; left: 755px; background: black; overflow: hidden;}
+		#midcon6{position: absolute; top: 90px; left: 220px;}
+		#midcon7{position: absolute; top: 90px; left: 0px; overflow: hidden; animation-name: itrb; animation-duration: 1s; animation-iteration-count: infinite; animation-direction: alternate-reverse; animation-timing-function: linear; animation-play-state: running; display: none;}
+		#midcon8{position: absolute; top: 90px; right: 0px; overflow: hidden; animation-name: itrbb; animation-duration: 1s; animation-iteration-count: infinite; animation-direction: alternate-reverse; animation-timing-function: linear; animation-play-state: running; display: none;}
+		#midmenu{position: absolute; width: 745px; height: 40px; border: 1px solid red; background: blue; z-index: 999;}
+		#midmenu1{position: absolute; width: 140px; height: 40px; border: 1px solid red; font-size: 2em; font-weight: 700; line-height: 1em; color: white; cursor: pointer;}
+		#midmenu2{position: absolute; width: 80px; height: 40px; left: 140px; border: 1px solid red; font-size: 2em; font-weight: 700; line-height: 1em; color: white; cursor: pointer;}
+		#midmenu3{position: absolute; width: 50px; height: 40px; right: -2px; border: 1px solid red; font-size: 1em; font-weight: 400; line-height: 1em; color: white; cursor: pointer; text-align: right; top: -1px;}
+		#midmenu4{position: absolute; width: 140px; height: 40px; right: 49px; border: 1px solid red; font-size: 1em; font-weight: 400; line-height: 1em; color: white; cursor: pointer; text-align: right; top: -1px;}
+		#midconback{position: absolute; background-color: black; display: none; }
+		#midcongif{position: absolute; left: 190px; top: 200px; display: none;}
+
+
+
+
+		.botind{margin: auto; width: 1500px; height: 150px; border: 1px solid black; font-family: 'Noto Sans KR', sans-serif; overflow: hidden;}
+		#botind1{width: 1500px; height: 3px; background: black; top: 17px; position: relative;}
+		#botind2{width: 1500px; height: 3px; background: black; top: 128px; position: relative;}
+		#botind3{position: relative; width: 450px; height: 60px; top: 38px; border: 1px solid black; font-weight: 700; font-size: 4em; line-height: 55px; background: white; cursor: pointer;}
+		#botind3:hover{background: #f3ff00;}
+		#botind9{position: relative; width: 118px; height: 60px; top: -24px; left: 451px; border: 1px solid black; font-weight: 700; font-size: 4em; line-height: 55px; background: white; cursor: pointer;}
+		#botind9:hover{background: #f3ff00;}
+		#botind10{position: relative; width: 150px; height: 60px; top: -86px; left: 570px; border: 1px solid black; font-weight: 100; font-size: 2em; line-height: 1em; background: white; cursor: pointer;}
+		#botind10:hover{background: #f3ff00;}
+		#botind4{width: 110px; height: 112px; border: 1px solid black; float: right; position: relative; top: -173px; text-align: center;}
+		#botind5{width: 110px; height: 112px; border: 1px solid black; float: right; position: relative; top: -173px; text-align: center;}
+		#botind6{width: 110px; height: 112px; border: 1px solid black; float: right; position: relative; top: -173px; text-align: center;}
+		#botind7{width: 110px; height: 112px; border: 1px solid black; float: right; position: relative; top: -173px; text-align: center;}
+		#botind4 img,#botind5 img,#botind6 img,#botind7 img {height: 110px;}
+		#botind8{height:20px; position: relative; width: 300px; height: 60px; top: -148px; border: 1px solid black; font-weight: 900; font-size: 4.6em; line-height: 65px; background: white; left: 751px; font-family: 'Yantramanav', sans-serif; cursor: pointer; text-align: right;}
+		#botind8:hover{background: #f3ff00;}
+
+		#myCanvas{position: relative; top: 0px; left: 0px; transform: scale(1.17); transform-origin: 0 1;}
+
+		#third{width: 0px; height: 0px; position: absolute; top: 0px; animation: dropppp 50s infinite; background-color: red; font-size: 4em; font-weight: 700; color: white; display: none;}
+
+
+		@keyframes itrb{
+				from{left: 0px;}
+				to{left: 250px;}
+			}
+
+		@keyframes itrbb{
+				from{right: 0px;}
+				to{right: 340px;}
+			}
+
+		@keyframes dropppp{
+			from{transform: rotateZ(0deg);} 
+			to{transform: rotateZ(360deg);}
+		}
+
+		#mmcanvas {
+				position: absolute;
+				top: 0px;
+				left: -30px;
+				margin: 200px;
+				width: 700px; height: 700px;
+				background-color: none;
+				overflow: hidden;
+				display: none;
+			}
+		
+	</style>
+		<script id="post-vert" type="x-shader/x-vertex">
+				varying vec2 vUv;
+
+				void main() {
+					vUv = uv;
+					gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+				}
+			</script>
+			<script id="post-frag" type="x-shader/x-fragment">
+				#include <packing>
+
+				varying vec2 vUv;
+				uniform sampler2D tDiffuse;
+				uniform sampler2D tDepth;
+				uniform float cameraNear;
+				uniform float cameraFar;
+
+
+				float readDepth( sampler2D depthSampler, vec2 coord ) {
+					float fragCoordZ = texture2D( depthSampler, coord ).x;
+					float viewZ = perspectiveDepthToViewZ( fragCoordZ, cameraNear, cameraFar );
+					return viewZToOrthographicDepth( viewZ, cameraNear, cameraFar );
+				}
+
+				void main() {
+					//vec3 diffuse = texture2D( tDiffuse, vUv ).rgb;
+					float depth = readDepth( tDepth, vUv );
+
+					gl_FragColor.rgb = 1.0 - vec3( depth );
+					gl_FragColor.a = 1.0;
+				}
+		</script>
+	</head>
+	<body>
+		
+		<a href="idk5.html"><div id="changepage">내가 직접 문장부호 만드는 페이지, 클릭</div></a>
+		<div class="tophead">
+			<div id="tphd1">
+				- 드래그 하면 설명이 나오게? 설명아니어도 어떤 문장 나오게
+			</div>
+			<div id="tphd2">
+				< <a href="idk.html" style="color: red;">1</a> , <a href="idk2.html">2</a> , <a href="idk3.html">3</a> ,<a href="idk4.html"> 4</a> >
+			</div>
+			<div id="tphd3">
+				interrobang
+			</div>
+		</div>	
+		<div class="midcon">
+			<div id="midmenu">
+				<div id="midmenu1">
+					배경지식,
+				</div>
+				<div id="midmenu2">
+					끄기
+				</div>
+				<div id="midmenu3">
+					끄기
+				</div>
+				<div id="midmenu4">
+					🖼️캔버스사용예시
+				</div>
+			</div>
+			<div id="midcon1"></div>
+			<div id="midcon2"></div>
+			<div id="midcon3"></div>
+			<div id="midcon4">
+				<div id="mmcanvas">
+					<canvas></canvas>
+				</div>
+				
+				<div id="midconback">
+					<img src="itrbbb.png">
+				</div>
+				<div id="midcongif">
+					<img src="tetest.gif">
+				</div>
+					호기심과 놀라움<a href="itrbbb.png">‽</a> <br>사소한 질문에서 기발한 해답을 찾는 발상의 <a href="itrbbb.png">‽</a>전환<a href="itrbbb.png">‽</a><br><br>의구심과 놀라움<a href="itrbbb.png">‽</a><br>호기심과 놀라움<a href="itrbbb.png">‽</a><br><br>사소한 질문에서 기발한 해답을 찾는 발상의 <a href="itrbbb.png">‽</a>전환<a href="itrbbb.png">‽</a><br>의구심과 놀라움<a href="itrbbb.png">‽</a>
+			</div>
+			
+			<div id="midcon5">
+				
+				<div id="third"><p>X</p></div>
+				<div id="midcon6" >
+					<img src="itrbline2.png">
+				</div>
+				<div id="midcon7">
+					<img src="questline.png" >
+				</div>
+				<div id="midcon8">
+					<img src="exclaline.png">
+				</div>
+				<canvas id="myCanvas" style="width:745px; height:732px;"></canvas>
+				
+			</div>
+		</div>
+		<div class="botind">
+			<div id="botind1"></div>
+			<div id="botind2"></div>
+			<div id="botind3">움직이는거 켜기,</div>
+			<div id="botind9">끄기</div>
+			<div id="botind10">꾸밈 켜기,</div>
+
+			<div id="botind4">
+				<img src="interrobang.png">
+			</div>
+			<div id="botind5">
+				<img src="acclamation.png">
+			</div>
+			<div id="botind6">
+				<img src="conviction.png">
+			</div>
+			<div id="botind7">
+				<img src="authority.png">
+			</div>
+			<div id="botind8" onclick="takeScreenShot()">Snapshot</div>
+		</div>
+		
+		
+	</body>
+	<script type="text/paperscript" canvas="myCanvas">
+		var path;
+
+		var textItem = new PointText({
+			content: '이 캔버스 안에서 그려보세요 ✏️',
+			point: new Point(50, 70),
+			fillColor: 'white',
+			fontSize: 20,
+			fontWeight:900,
+		});
+
+		function onMouseDown(event) {
+			// If we produced a path before, deselect it:
+			if (path) {
+				path.selected = true;
+			}
+
+			// Create a new path and set its stroke color to black:
+			path = new Path({
+				segments: [event.point],
+				strokeColor: 'white',
+
+				// Select the path, so we can see its segment points:
+				fullySelected: true
+			});
+		}
+
+		// While the user drags the mouse, points are added to the path
+		// at the position of the mouse:
+		function onMouseDrag(event) {
+			path.add(event.point);
+
+			// Update the content of the text item to show how many
+			// segments it has:
+			textItem.content = '선분 갯수: ' + path.segments.length;
+		}
+
+		// When the mouse is released, we simplify the path:
+		function onMouseUp(event) {
+			var segmentCount = path.segments.length;
+
+			// When the mouse is released, simplify it:
+			path.simplify(10);
+
+			// Select the path, so we can see its segments:
+			path.fullySelected = true;
+
+			var newSegmentCount = path.segments.length;
+			var difference = segmentCount - newSegmentCount;
+			var percentage = 100 - Math.round(newSegmentCount / segmentCount * 100);
+			textItem.content = '완성했으면 Snapshot을 눌러서 저장하세요.';
+		}
+</script>
+<script>
+	midmenu1.onclick = function(){
+			document.getElementById("midconback").style.display = 'inline';		
+		}
+	midmenu2.onclick = function(){
+			document.getElementById("midconback").style.display = 'none';		
+		}
+	midmenu4.onclick = function(){
+			document.getElementById("mmcanvas").style.display = 'inline';		
+		}
+	midmenu3.onclick = function(){
+			document.getElementById("mmcanvas").style.display = 'none';		
+		}
+
+
+
+	botind3.onclick = function(){
+			document.getElementById("midcon7").style.display = 'inline';
+			document.getElementById("midcon8").style.display = 'inline';
+		}
+	botind9.onclick = function(){
+			document.getElementById("midcon7").style.display = 'none';
+			document.getElementById("midcon8").style.display = 'none';
+		}
+
+	var takeScreenShot = function() {
+		    html2canvas(document.getElementById("midcon5"), {
+		        onrendered: function (canvas) {
+		            var tempcanvas=document.createElement('canvas');
+		            tempcanvas.width=745;
+		            tempcanvas.height=732;
+		            var context=tempcanvas.getContext('2d');
+		            context.drawImage(canvas,0,0,745,730,0,0,745,732);
+		            var link=document.createElement("a");
+		            link.href=tempcanvas.toDataURL('image/jpg');   //function blocks CORS
+		            link.download = 'screenshot.jpg';
+		            link.click();
+		        }
+		    });
+		}
+
+		window.onscroll = function() {myFunction()};
+
+	function myFunction() {
+	    if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+	        document.getElementById("midcon4").className = "test";
+	    } else {
+	        document.getElementById("midcon4").className = "";
+	    }
+	}
+
+	botind10.onclick = function(){
+			var total = 0;
+			for(var i=0;i<100;i++){
+
+				var s = document.getElementById("third");
+				var newttt = s.cloneNode(true);
+				newttt.style.left = Math.random()*window.innerWidth + "px";
+				newttt.style.top = Math.random()*window.innerHeight + "px";
+				newttt.style.animationDuration = Math.random()*10+"s";
+				//newttt.style.background = "rgb("+Math.random()*255+","+Math.random()*255+","+Math.random()*255+")";
+				newttt.style.display = "inline"
+				document.getElementById("midcon5").appendChild(newttt);
+				
+			}
+		}
+</script>
+		<script src="three.js"></script>
+		<script src="SSAOShader.js"></script>
+		<script src="OrbitControls.js"></script>
+		<script src="stats.min.js"></script>
+
+		<script>
+
+			var camera, scene, renderer, stats;
+			var target;
+			var postScene, postCamera;
+			var supportsExtension = true;
+
+			init();
+			animate();
+
+			function init() {
+
+				renderer = new THREE.WebGLRenderer( { canvas: document.querySelector( 'canvas' ) } );
+
+				if ( ! renderer.extensions.get( 'WEBGL_depth_texture' ) ) {
+
+					supportsExtension = false;
+					document.querySelector( '#error' ).style.display = 'block';
+					return;
+
+				}
+
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+				//
+
+				stats = new Stats();
+				document.body.appendChild( stats.dom );
+
+				camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 50 );
+				camera.position.z = 15;
+
+				var controls = new THREE.OrbitControls( camera, renderer.domElement );
+				controls.enableDamping = true;
+				controls.dampingFactor = 0.25;
+				controls.rotateSpeed = 0.35;
+
+				// Create a multi render target with Float buffers
+				target = new THREE.WebGLRenderTarget( window.innerWidth, window.innerHeight );
+				target.texture.format = THREE.RGBFormat;
+				target.texture.minFilter = THREE.NearestFilter;
+				target.texture.magFilter = THREE.NearestFilter;
+				target.texture.generateMipmaps = false;
+				target.stencilBuffer = false;
+				target.depthBuffer = true;
+				target.depthTexture = new THREE.DepthTexture();
+				target.depthTexture.type = THREE.UnsignedShortType;
+
+				// Our scene
+				scene = new THREE.Scene();
+				setupScene();
+
+				// Setup post-processing step
+				setupPost();
+
+				onWindowResize();
+				window.addEventListener( 'resize', onWindowResize, false );
+
+			}
+
+			function setupPost() {
+
+				// Setup post processing stage
+				postCamera = new THREE.OrthographicCamera( - 1, 1, 1, - 1, 0, 1 );
+				var postMaterial = new THREE.ShaderMaterial( {
+					vertexShader: document.querySelector( '#post-vert' ).textContent.trim(),
+					fragmentShader: document.querySelector( '#post-frag' ).textContent.trim(),
+					uniforms: {
+						cameraNear: { value: camera.near },
+						cameraFar: { value: camera.far },
+						tDiffuse: { value: target.texture },
+						tDepth: { value: target.depthTexture }
+					}
+				} );
+				var postPlane = new THREE.PlaneBufferGeometry( 2, 2 );
+				var postQuad = new THREE.Mesh( postPlane, postMaterial );
+				postScene = new THREE.Scene();
+				postScene.add( postQuad );
+
+			}
+
+			function setupScene() {
+
+				//var diffuse = new THREE.TextureLoader().load( 'textures/brick_diffuse.jpg' );
+				//diffuse.wrapS = diffuse.wrapT = THREE.RepeatWrapping;
+
+				// Setup some geometries
+				var geometry = new THREE.TorusKnotBufferGeometry( 1, 0.3, 128, 64 );
+				var material = new THREE.MeshBasicMaterial( { color: 'blue' } );
+
+				var count = 50;
+				var scale = 5;
+
+				for ( var i = 0; i < count; i ++ ) {
+
+					var r = Math.random() * 2.0 * Math.PI;
+					var z = ( Math.random() * 2.0 ) - 1.0;
+					var zScale = Math.sqrt( 1.0 - z * z ) * scale;
+
+					var mesh = new THREE.Mesh( geometry, material );
+					mesh.position.set(
+						Math.cos( r ) * zScale,
+						Math.sin( r ) * zScale,
+						z * scale
+					);
+					mesh.rotation.set( Math.random(), Math.random(), Math.random() );
+					scene.add( mesh );
+
+				}
+
+			}
+
+			function onWindowResize() {
+
+				var aspect = 400 / 400;
+				camera.aspect = aspect;
+				camera.updateProjectionMatrix();
+
+				var dpr = renderer.getPixelRatio();
+				target.setSize( 7000, 4000 );
+				renderer.setSize( 400, 400 );
+
+			}
+
+			function animate() {
+
+				if ( ! supportsExtension ) return;
+
+				requestAnimationFrame( animate );
+
+				// render scene into target
+				renderer.render( scene, camera, target );
+
+				// render post FX
+				renderer.render( postScene, postCamera );
+
+				stats.update();
+
+			}
+
+		</script>
+</html>
