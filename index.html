@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Noto+Sans|Noto+Sans+KR" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Heebo|Hind+Madurai|Hind+Siliguri|Nunito+Sans|Yantramanav" rel="stylesheet">
+		<title>땋은머리.대문</title>
+		<style type="text/css">
+			@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+			a:link, a:active, a:visited{text-decoration: none; }
+	        a:link, a:active, a:visited{color: blue;}
+			body {transform: scale(0.9); transform-origin: 0 1;}
+
+			#all{height: 1030px; width: 1610px; overflow: hidden; margin: auto; border: 1px solid black; overflow: hidden;}
+			
+			#text{position: relative; width: 1300px; height: 195px; border: 1px solid black; float:right; text-align: right; font-family:'Noto Sans KR', '맑은 고딕', '돋움'; font-size: 1.6em; line-height: 2em; font-weight: 700; margin-top: -15px; border-right:0px; }
+
+			#text2{position: relative; width: 590px; height: 450px; border: 1px solid black;text-align: center; font-family:'Noto Sans KR', '맑은 고딕', '돋움'; font-size: 5em; line-height: 1em; font-weight: 700; top: 309px; overflow: hidden; transform: rotate(20deg); left:59px;}
+			#text2:hover{transform:rotate(0deg); transition-duration: 0.5s;}
+
+			#text3{position: relative; width: 590px; height: 450px; border: 1px solid black;text-align: center; font-family:'Noto Sans KR', '맑은 고딕', '돋움'; font-size: 5em; line-height: 1em; font-weight: 700; top: -630px; overflow: hidden; transform: rotate(-20deg); left:359px; }
+			#text3:hover{transform:rotate(0deg); transition-duration: 0.5s;}
+
+			#text5{position: relative; width: 590px; height: 450px; border: 1px solid black; top: -989px; overflow: hidden; transform: rotate(-50deg); left:951px;}
+			#text4{position: absolute; width: 590px; height: 450px; top: 0px; overflow: hidden; transform: rotate(0deg); left:0px; opacity: 0; background-color: pink;}
+			#text4:hover{opacity: 1;}
+			#text5:hover{transform:rotate(0deg); transition-duration: 0.5s;}
+			#text4 img{width: 1200px; height: 700px; position: absolute; top: -170px; left: -300px;}
+
+			#nav{position: relative; width: 275px; height: 335px; top: -478px; left: 31px; font-family:'Noto Sans KR', '맑은 고딕', '돋움'; font-size: 1.6em; line-height: 1.6em; font-weight: 700; }
+			#nav1{width: 310px; height: 40px; border: 1px solid black; border-bottom: 0px;}
+			#nav2{width: 310px; height: 40px; border: 1px solid black; border-bottom: 0px;}
+			#nav3{width: 310px; height: 40px; border: 1px solid black; border-bottom: 0px;}
+			#nav4{width: 310px; height: 40px; border: 1px solid black; border-bottom: 0px;}
+			#nav5{width: 310px; height: 40px; border: 1px solid black; border-bottom: 0px;}
+			#nav6{width: 310px; height: 40px; border: 1px solid black; border-bottom: 0px;}
+			#nav7{width: 310px; height: 40px; border: 1px solid black; border-bottom: 0px;}
+			#nav8{width: 310px; height: 40px; border: 1px solid black;}
+
+			#link1{position: relative; font-family:'Noto Sans KR', '맑은 고딕', '돋움'; font-size: 1em; line-height: 1.5em; font-weight: 700; width: 152px; height: 40px; top: -40px; left: 156px;}
+			#link2{position: relative; font-family:'Noto Sans KR', '맑은 고딕', '돋움'; font-size: 1em; line-height: 1.5em; font-weight: 700; width: 150px; height: 40px; border: 1px solid black; top: -40px; left: 160px;}
+			#link3{position: relative; font-family:'Noto Sans KR', '맑은 고딕', '돋움'; font-size: 1em; line-height: 1.5em; font-weight: 700; width: 150px; height: 40px; border: 1px solid black; top: -40px; left: 160px;}
+			#link4{position: relative; font-family:'Noto Sans KR', '맑은 고딕', '돋움'; font-size: 1em; line-height: 1.5em; font-weight: 700; width: 150px; height: 40px; border: 1px solid black; top: -40px; left: 160px;}
+			#link5{position: relative; font-family:'Noto Sans KR', '맑은 고딕', '돋움'; font-size: 1em; line-height: 1.5em; font-weight: 700; width: 150px; height: 40px; border: 1px solid black; top: -40px; left: 160px;}
+			#link6{position: relative; font-family:'Noto Sans KR', '맑은 고딕', '돋움'; font-size: 1em; line-height: 1.5em; font-weight: 700; width: 150px; height: 40px; border: 1px solid black; top: -40px; left: 160px;}
+			#link7{position: relative; font-family:'Noto Sans KR', '맑은 고딕', '돋움'; font-size: 1em; line-height: 1.5em; font-weight: 700; width: 150px; height: 40px; border: 1px solid black; top: -40px; left: 160px;}
+			#link8{position: relative; font-family:'Noto Sans KR', '맑은 고딕', '돋움'; font-size: 1em; line-height: 1.5em; font-weight: 700; width: 150px; height: 40px; border: 1px solid black; top: -40px; left: 160px;}
+		
+			#gliph1{width: 116px; height: 116px; position: relative; float: left;}
+			#gliph2{width: 116px; height: 116px; position: relative; float: left;}
+			#gliph3{width: 116px; height: 116px; position: relative; float: left;}
+			#gliph4{width: 116px; height: 116px; position: relative; float: left;}
+			#gliph5{width: 116px; height: 116px; position: relative; float: left;}
+			#gliph6{width: 116px; height: 116px; position: relative; float: left;}
+			#gliph7{width: 116px; height: 116px; position: relative; float: left;}
+			#gliph8{width: 116px; height: 116px; position: relative; float: left;}
+			#gliph9{width: 116px; height: 116px; position: relative; float: left;}
+			#gliph10{width: 116px; height: 116px; position: relative; float: left;} 
+			#gliph11{width: 116px; height: 116px; position: relative; float: left;}
+			#gliph12{width: 116px; height: 116px; position: relative; float: left;}
+			#gliph13{width: 116px; height: 116px; position: relative; float: left;}
+			#gliph14{width: 116px; height: 116px; position: relative; float: left;}
+			#gliph15{width: 116px; height: 116px; position: relative; float: left;}
+			#gliph16{width: 116px; height: 116px; position: relative; float: left;}
+			#gliph17{width: 116px; height: 116px; position: relative; float: left;}
+			#gliph18{width: 116px; height: 116px; position: relative; float: left;}
+			#gliph19{width: 116px; height: 116px; position: relative; float: left;}
+			#gliph20{width: 116px; height: 116px; position: relative; float: left;}
+
+			@keyframes clocks{
+				0%{transform: rotate(0deg);}
+				25%{transform: rotate(90deg);}
+				50%{transform: rotate(180deg);}
+				75%{transform: rotate(270deg);}
+				100%{transform: rotate(360deg);}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="all">
+			<div id="text">
+			이 사이트는 총 8개의 페이지로 구성되어있습니다. 앞의 4페이지는 느낌표에서 파생된 4개의 문장부호를 다루고 있습니다. 애니메이션, gif를 통해 쓰임새를 표현하고 있습니다. 뒤의 4페이지는 아직 문장부호가 만들어지지 않은 어감들을 문학, 비문학 지문을 통해 다루고 있습니다. 각각의 페이지는 하나의 주제를 다루고 있습니다. 모든 페이지에 캔버스와 스냅해 기능으로 직접 디자인한 기호를 저장할 수 있습니다. 재미있는 글자, 기호, 도형을 그려보세요. <a href="idk.html">(시작)</a>
+			</div>
+			
+			<div id="text2">
+				<div id="gliph1" style="animation-name: clocks; animation-duration: 2s; animation-iteration-count: infinite; animation-timing-function: steps();">!</div>
+				<div id="gliph2" style="animation-name: clocks; animation-duration: 5s; animation-iteration-count: infinite; animation-timing-function: steps();">¡</div>
+				<div id="gliph3">?</div>
+				<div id="gliph4" style="animation-name: clocks; animation-duration: 2s; animation-iteration-count: infinite; animation-timing-function: steps();">¿</div>
+				<div id="gliph5">.</div>
+				<div id="gliph6">,</div>
+				<div id="gliph7" style="animation-name: clocks; animation-duration: 1s; animation-iteration-count: infinite; animation-timing-function: steps();">…</div>
+				<div id="gliph8">❴</div>
+				<div id="gliph9" style="animation-name: clocks; animation-duration: 2s; animation-iteration-count: infinite; animation-timing-function: steps();">:;</div>
+				<div id="gliph10" style="animation-name: clocks; animation-duration: 1s; animation-iteration-count: infinite; animation-timing-function: steps();">❵</div>
+				<div id="gliph11" style="animation-name: clocks; animation-duration: 2s; animation-iteration-count: infinite; animation-timing-function: steps();">﹅</div>
+				<div id="gliph12">﹆</div>
+				<div id="gliph13">$</div>
+				<div id="gliph14">[</div>
+				<div id="gliph15"style="animation-name: clocks; animation-duration: 5s; animation-iteration-count: infinite; animation-timing-function: steps();">‛’</div>
+				<div id="gliph16">]</div>
+				<div id="gliph17">#</div>
+				<div id="gliph18"style="animation-name: clocks; animation-duration: 1s; animation-iteration-count: infinite; animation-timing-function: steps();">@</div>
+				<div id="gliph19"style="animation-name: clocks; animation-duration: 2s; animation-iteration-count: infinite; animation-timing-function: steps();">%</div>
+				<div id="gliph20">&</div>
+			</div>
+
+			<div id="nav">
+				<div id="nav1">페이지1
+					<div id="link1"><a href="idk.html">interrobang</a></div>
+				</div>
+				<div id="nav2">페이지2
+					<div id="link1"><a href="idk2.html">acclamation</a></div>
+				</div>
+				<div id="nav3">페이지3
+					<div id="link1"><a href="idk3.html">conviction</a></div>
+				</div>
+				<div id="nav4">페이지4
+					<div id="link1"><a href="idk4.html">authority</a></div>
+				</div>
+				<div id="nav5">페이지5
+					<div id="link1"><a href="idk5.html">번역투 문장</a></div>
+				</div>
+				<div id="nav6">페이지6
+					<div id="link1"><a href="idk6.html">파인만 효과</a></div>
+				</div>
+				<div id="nav7">페이지7
+					<div id="link1"><a href="idk7.html">쉬어가기</a></div>
+				</div>
+				<div id="nav8">페이지8
+					<div id="link1"><a href="idk8.html">시적 허용</a></div>
+				</div>
+			</div>
+
+			<div id="text3">
+				<div id="gliph1" style="animation-name: clocks; animation-duration: 2s; animation-iteration-count: infinite; animation-timing-function: steps();">!</div>
+				<div id="gliph2" style="animation-name: clocks; animation-duration: 5s; animation-iteration-count: infinite; animation-timing-function: steps();">¡</div>
+				<div id="gliph3">?</div>
+				<div id="gliph4" style="animation-name: clocks; animation-duration: 2s; animation-iteration-count: infinite; animation-timing-function: steps();">¿</div>
+				<div id="gliph5">.</div>
+				<div id="gliph6">,</div>
+				<div id="gliph7" style="animation-name: clocks; animation-duration: 1s; animation-iteration-count: infinite; animation-timing-function: steps();">…</div>
+				<div id="gliph8">❴</div>
+				<div id="gliph9" style="animation-name: clocks; animation-duration: 2s; animation-iteration-count: infinite; animation-timing-function: steps();">:;</div>
+				<div id="gliph10" style="animation-name: clocks; animation-duration: 1s; animation-iteration-count: infinite; animation-timing-function: steps();">❵</div>
+				<div id="gliph11" style="animation-name: clocks; animation-duration: 2s; animation-iteration-count: infinite; animation-timing-function: steps();">﹅</div>
+				<div id="gliph12">﹆</div>
+				<div id="gliph13">$</div>
+				<div id="gliph14">[</div>
+				<div id="gliph15"style="animation-name: clocks; animation-duration: 5s; animation-iteration-count: infinite; animation-timing-function: steps();">‛’</div>
+				<div id="gliph16">]</div>
+				<div id="gliph17">#</div>
+				<div id="gliph18"style="animation-name: clocks; animation-duration: 1s; animation-iteration-count: infinite; animation-timing-function: steps();">@</div>
+				<div id="gliph19"style="animation-name: clocks; animation-duration: 2s; animation-iteration-count: infinite; animation-timing-function: steps();">%</div>
+				<div id="gliph20">&</div>
+			</div>
+			<div id="text5">
+			<div id="text4">
+				
+					<img src="indexim.png">
+				
+			</div>
+			</div>
+		</div>
+		
+	</body>
